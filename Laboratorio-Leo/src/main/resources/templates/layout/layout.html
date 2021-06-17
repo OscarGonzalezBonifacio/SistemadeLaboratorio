@@ -12,7 +12,7 @@
 
 <link rel="stylesheet" th:href="@{/Login/fontawesome-free-5.15.2-web/css/all.min.css}"/>
 
-
+<link rel="stylesheet" th:href="@{/css/menu.css/}"/>
 
 
 <link rel="stylesheet" th:href="@{/Login/fonts/}"/>
@@ -41,8 +41,22 @@
 						<li class="nav-item"><a class="nav-link" href="#about"
 						th:href="@{/Usuarios/ListUsuarios}">Administracion de Usuarios</a></li>
 						
+					<!-- Menu Boton de Administracion de Usuarios -->
 						
-						
+		  <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Administracion de Usuarios
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+            <a class="dropdown-item" th:href="@{/Usuarios/create}">Nuevo Usuario</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+					
+					
+					
 						
 				</ul>
 				
