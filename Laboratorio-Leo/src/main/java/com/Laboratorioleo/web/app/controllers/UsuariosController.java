@@ -12,16 +12,15 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
+
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-
-import com.Laboratorioleo.web.app.models.entity.Role;
+import com.Laboratorioleo.web.app.models.entity.Cliente;
 import com.Laboratorioleo.web.app.models.entity.Usuario;
 import com.Laboratorioleo.web.app.models.service.IPerfilservice;
 import com.Laboratorioleo.web.app.models.service.IRoleService;
@@ -54,27 +53,32 @@ public class UsuariosController {
 	private IRoleService roleservice;
 	
 		
-	@GetMapping("/create")
-	public String crear( Model model) {
-		model.addAttribute("listRoles", roleservice.findAll());
-		Usuario usuario = new Usuario();
-		model.addAttribute("Usuario", usuario);
+	
+	@RequestMapping(value = "/CreateUser")
+	public String crear(Map<String, Object> model) {
 		
-		//model.addAttribute("usuario", new Usuario());
+		//Usuario usuario = new Usuario();
+		model.put("listRoles", roleservice.findAll());
+	   model.put("usuario", new Usuario());
 		
+		//model.addAttribute("listRoles", roleservice.findAll());
+		//Usuario eEmpleado = new Usuario();
+		//model.addAttribute("Empleado", eEmpleado);
+		
+	//	model.addAttribute("usuario", new Usuario());
 		return "Usuarios/CreateUser";
 		
 	}
 	
 	
-	@PostMapping("/save")
-	public String saveUser(Usuario usuario) {
+	@RequestMapping(value ="/CreateUser", method = RequestMethod.POST)
+	public String saveUser(Usuario usuario, Model model) {
 		
 		String tmpPass = usuario.getPassword();
 		String encriptado = encoder.encode(tmpPass);
 		usuario.setPassword(encriptado);
 	servicePerfiles.save(usuario); 
-		return "redirect/Usuarios";
+	return "redirect:/Usuarios/ListUsuarios"; 
 	}
 	
 	

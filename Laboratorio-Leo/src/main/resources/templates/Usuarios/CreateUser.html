@@ -13,7 +13,7 @@
 			<h1 class ="text-align:center" th:if="${usuario.id == null}">Create New User</h1>
 			<h1 th:unless="${usuario.id == null}">Edit User</h1>
 		</div>
-		<form th:action="@{/Usuarios/create}" th:object="${usuario}"
+		<form th:action="@{/Usuarios/CreateUser}" th:object="${usuario}"
 			method="post" style="max-width: 600px; margin: 0 auto;">
 			<input type="hidden" th:field="*{id}" th:value="${usuario.id}">
 
