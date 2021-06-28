@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+
 import com.Laboratorioleo.web.app.models.entity.Role;
 import com.Laboratorioleo.web.app.models.entity.Usuario;
 import com.Laboratorioleo.web.app.models.service.IPerfilservice;
@@ -56,7 +57,11 @@ public class UsuariosController {
 	@GetMapping("/create")
 	public String crear( Model model) {
 		model.addAttribute("listRoles", roleservice.findAll());
-		model.addAttribute("usuario", new Usuario());
+		Usuario usuario = new Usuario();
+		model.addAttribute("Usuario", usuario);
+		
+		//model.addAttribute("usuario", new Usuario());
+		
 		return "Usuarios/CreateUser";
 		
 	}
@@ -69,7 +74,7 @@ public class UsuariosController {
 		String encriptado = encoder.encode(tmpPass);
 		usuario.setPassword(encriptado);
 	servicePerfiles.save(usuario); 
-		return "redirect:create";
+		return "redirect/Usuarios";
 	}
 	
 	
