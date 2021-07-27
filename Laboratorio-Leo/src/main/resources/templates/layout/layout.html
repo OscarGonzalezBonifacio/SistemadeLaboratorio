@@ -13,6 +13,7 @@
 <link rel="stylesheet" th:href="@{/Login/fontawesome-free-5.15.2-web/css/all.min.css}"/>
 
 <link rel="stylesheet" th:href="@{/css/menu.css/}"/>
+<link rel="stylesheet" th:href="@{/css/Diseño-Layaout.css/}"/>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -123,74 +124,58 @@
 	<div class="container"></div>
 
 	<!--<footer th:fragment="footer" class="container">  -->
-		<footer th:fragment="footer "  class="bg-primary text-white text-center text-lg-start ">
-    <!-- Grid container -->
-    <div class="container p-4">
-      <!--Grid row-->
-      <div class="row">
-        <!--Grid column-->
-        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Footer Content</h5>
-  
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-            molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
-            voluptatem veniam, est atque cumque eum delectus sint!
-          </p>
+		<footer th:fragment="footer " id="footer" class="footer">
+   
+        <div class="contenedor">
+                <div class="nav-footer">
+                    <h3>MiViaje.com</h3>
+                    <nav class="menu">
+                        <a href="#">Empleo</a>
+                        <a href="#">Prensa</a>
+                        <a href="#">Politicas</a>
+                        <a href="#">Ayuda</a>
+                    </nav>
+                </div>
+
+                <div class="nav-footer">
+                    <h3>Descubre MiViaje.com</h3>
+                    <nav class="menu">
+                        <a href="#">Confianza y Seguridad</a>
+                        <a href="#">Crédito de Viajero</a>
+                        <a href="#">AirBNB Citizen</a>
+                        <a href="#">Viaje de negocios</a>
+                    </nav>
+                </div>
+
+                <div class="nav-footer">
+                    <h3>Hospedaje</h3>
+                    <nav class="menu">
+                        <a href="#">Razones para Hospedar</a>
+                        <a href="#">Hospitalidad</a>
+                        <a href="#">Ser un anfitrión responsable</a>
+                        <a href="#">Centro de la Comunidad</a>
+                    </nav>
+                </div>
+
+                <div class="nav-footer">
+                    <nav class="sociales">
+                        <ul>
+                            <li><a href="http://facebook.com" target="_blank"><span>Facebook</span></a></li>
+                            <li><a href="http://twitter.com" target="_blank"><span>Twitter</span></a></li>
+                            <li><a href="http://instagram.com" target="_blank"><span>Instagram</span></a></li>
+                        </ul>
+                    </nav>
+                    <nav class="menu">
+                        <a href="#">Razones para Hospedar</a>
+                        <a href="#">Hospitalidad</a>
+                        <a href="#">Ser un anfitrión responsable</a>
+                        <a href="#">Centro de la Comunidad</a>
+                    </nav>
+                </div>
+
+
         </div>
-        <!--Grid column-->
-  
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
-  
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#!" class="text-white">Link 1</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 2</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 4</a>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
-  
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase mb-0">Links</h5>
-  
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!" class="text-white">Link 1</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 2</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-white">Link 4</a>
-            </li>
-          </ul>
-        </div>
-        <!--Grid column-->
-      </div>
-      <!--Grid row-->
-    </div>
-    <!-- Grid container -->
-  
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-      © 2021 Copyright:
-      <a class="text-white" href="https://LaboratorioLeo">Laboratorio Leonel</a>
-    </div>
+ 
  
 
 		<!-- Optional JavaScript -->
@@ -199,6 +184,9 @@
 		<script th:src="@{/js/popper.min.js}"></script>
 		<script th:src="@{/js/bootstrap.min.js}"></script>
 		<script th:src="@{/js/jquery-ui.min.js}"></script>
+		
+		<a href="#footer" class="btn-flotante">información</a>
+		 <script src="js/Footer.js"></script>
 	</footer>
 </body>
 </html>
